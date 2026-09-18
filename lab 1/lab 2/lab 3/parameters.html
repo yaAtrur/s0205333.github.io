@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <title>Страница с параметрами</title>
+</head>
+<body>
+
+  <h1>Параметры URL</h1>
+
+  <p>Имя: <span id="name"></span></p>
+  <p>Группа: <span id="group"></span></p>
+  <p>Курс: <span id="course"></span></p>
+
+  <a href="index.html">Вернуться на главную</a>
+
+  <script>
+    const params = new URLSearchParams(window.location.search);
+
+    document.getElementById("name").textContent = params.get("name");
+    document.getElementById("group").textContent = params.get("group");
+    document.getElementById("course").textContent = params.get("course");
+  </script>
+
+</body>
+</html>
